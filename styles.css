@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+  font-weight: bold;
+  box-sizing: border-box;
+}
+body {
+  background-color: azure;
+}
+.calculator-grid {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  margin-top: 40px;
+}
+button {
+  border: 1px rgba(245, 243, 243, 0.712) solid;
+  background-color: rgb(215, 247, 236);
+  font-size: large;
+  cursor: pointer;
+  outline: none;
+}
+button:hover {
+  background-color: rgb(76, 76, 77);
+  border-color: rgb(126, 121, 121);
+  color: white;
+}
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1/-1; /* 1/-1 is a neat trick that will column all the available columns*/
+  
+  background-color: rgba(47, 79, 79, 0.692);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 20px;
+  word-wrap: break-word;
+  word-break: break-all;
+  
+}
+.output .previous-operand {
+  font-size: large;
+  color: rgba(255, 255, 255, 0.726);
+}
+.output .current-operand {
+  font-size: xx-large;
+  color: rgb(240, 248, 255);
+}
+
+* {
+  zoom: 95%;
+}
